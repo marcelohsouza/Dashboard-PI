@@ -7,6 +7,7 @@ from dash import Input, Output
 import plotly.express as px
 import plotly.graph_objects as go
 from bcb import sgs
+import os
 
 #Selecionar os Dados
 IPCA = sgs.get({'IPCA':433}, start='2000-01-01').reset_index()
@@ -212,4 +213,5 @@ def update_graph2(opcoes_correlacao,anos):
 
 
 if __name__ == '__main__':
-  app.run(debug=True)
+  port = int(os.environ.get("PORT", 8050))
+  app.run(debug=True, port=port)
