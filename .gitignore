@@ -1,0 +1,16 @@
+# Ignore da venv e outros files
+venv/
+
+
+*.log
+.env
+.DS_Store
+
+
+# Arquivos de cache do Python
+__pycache__/
+*.py[cod]
+
+.vscode/
+
+
